@@ -1,8 +1,8 @@
 {
-	
-  "directory" : "public/components",	
-  "scripts": {
-    "postinstall": "bower-requirejs -c config.js"
-  }
-  
+
+	"directory" : "public/components",
+	"scripts": {
+		"postinstall": "bower-requirejs -c config.js"
+	}
+
 }
