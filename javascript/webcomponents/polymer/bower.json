@@ -1,0 +1,11 @@
+{
+  "name": "x-tag-example",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  }
+}
