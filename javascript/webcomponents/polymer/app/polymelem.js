@@ -1,24 +1,21 @@
 define([], function(){
 
-  var activateElement =  function($el){
-    var methods = {
-      start: function(){
-        $el.interval = setInterval(this.update.bind($el), 1000);
-      },
-      stop: function(){
-        $el.interval = clearInterval($el.interval);
-      },
-      update: function(){
-        $el.textContent = new Date().toLocaleTimeString();
-      }
-    }
-    return methods;
-  };
-
   MyElement = Polymer({
 
     is: 'poly-clock',
 
+    /*utility methods*/
+    start: function(){
+      this.interval = setInterval(this.update.bind(this), 1000);
+    },
+    stop: function(){
+      this.interval = clearInterval(this.interval);
+    },
+    update: function(){
+      this.textContent = new Date().toLocaleTimeString();
+    },
+
+    /*lifecycle methods*/
     factoryImpl: function(foo, bar) {
       this.foo = foo;
       this.configureWithBar(bar);
@@ -26,13 +23,13 @@ define([], function(){
 
     created: function() {
       console.log(this.localName + '#' + this.id + ' was created');
-      this.textContent = new Date().toLocaleTimeString();
+      this.update();
     },
 
     ready: function() {
       // access a local DOM element by ID using this.$
       console.log(this.localName + '#' + this.id + ' is ready');
-      activateElement(this).start();
+      this.start();
     },
 
     attached: function() {
@@ -49,6 +46,19 @@ define([], function(){
       ' was changed to ' + this.getAttribute(name));
     },
 
+    /*events and listeners */
+    listeners: {
+      'tap': 'handleTimer'
+    },
+
+    handleTimer: function(e) {
+      console.log(e);
+      if (e.target.interval) e.target.stop();
+      else e.target.start();
+    },
+
+    /*static attributes added automatically to the element
+    example only they do nothing :) */
     hostAttributes: {
       'string-attribute': 'Value',
       'boolean-attribute': true,
