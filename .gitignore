@@ -1,0 +1,10 @@
+java/gwt/gwt-jsinterop/.classpath
+java/gwt/gwt-jsinterop/.gradle/2.9/taskArtifacts/cache.properties
+java/gwt/gwt-jsinterop/.gradle/2.9/taskArtifacts/fileHashes.bin
+*.bin
+java/gwt/gwt-jsinterop/.settings/com.google.gdt.eclipse.core.prefs
+java/gwt/gwt-jsinterop/.settings/com.google.gwt.eclipse.core.prefs
+*.prefs
+*.class
+java/gwt/gwt-jsinterop/build/gradle/META-INF/artifactory.gradle
+java/gwt/gwt-jsinterop/build/gradle/META-INF/common.sdo.gradle
