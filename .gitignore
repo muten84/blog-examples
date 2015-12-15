@@ -8,3 +8,4 @@ java/gwt/gwt-jsinterop/.settings/com.google.gwt.eclipse.core.prefs
 *.class
 java/gwt/gwt-jsinterop/build/gradle/META-INF/artifactory.gradle
 java/gwt/gwt-jsinterop/build/gradle/META-INF/common.sdo.gradle
+npm-debug.log
