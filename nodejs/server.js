@@ -1,3 +1,4 @@
+//fonte: https://github.com/spadin/simple-express-static-server/blob/master/server.js
 var express = require("express"),
     app = express(),
     bodyParser = require('body-parser'),
