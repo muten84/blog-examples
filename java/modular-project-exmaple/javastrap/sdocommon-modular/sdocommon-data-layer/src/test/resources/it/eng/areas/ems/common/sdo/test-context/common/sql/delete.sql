@@ -1,0 +1,1 @@
+delete FROM EXAMPLE WHERE ID = 'TEST';
